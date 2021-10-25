@@ -1,0 +1,243 @@
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+}
+#color {
+  margin-left: 35px;
+  background: #2f3640;
+  color: #f5f6fa;
+  height:40px;
+  font-size: 12pt;
+  width: 200px;
+  flex-direction: column;
+  border-radius: 8px;
+  display: inline-block;
+
+
+}
+#btn {
+  margin-top: 0;
+  margin-left: 25px;
+  background: #0096FF;
+  height:40px;
+  font-size: 12pt;
+  color: white;
+  width: 100px;
+  border-radius: 8px;
+  padding: 0;
+  display: inline-block;
+
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f7f6ff;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin: 16px;
+/* margin-left:500px; */
+justify-content: center;
+}
+
+.container {
+  display: flex;
+  padding: 0px;
+  /* margin-left: 500px; */
+  justify-content: center;
+}
+
+.select-box {
+  display:flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #2f3640;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: #2f3640;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #414b57;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+.container1 {
+  width: 100%;
+margin-top: 100px;
+/* margin-left: 550px; */
+justify-content: center;
+
+
+}
+
+.progressbar {
+  counter-reset: step;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 15%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+ color:#f7f6ff;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height : 30px;
+  border: 2px solid #f7f6ff;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: #f7f6ff;
+
+transition:  background-color 500ms;
+padding:8px;
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px;
+
+  background-color: #f7f6ff;
+  top: 25px;
+  left: -50%;
+  z-index : -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+
+  color: black;
+font-family: Georgia, serif;
+font-size: 20px;
+}
+.progressbar li.active:before {
+background-color: #ff4040;
+width: 35px;
+  height:35px;
+  border-color: #ff4040;
+
+color:#ff4040; /*for number display*/
+}
+.progressbar li.active:after {
+  background-color:black;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 40px 40%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

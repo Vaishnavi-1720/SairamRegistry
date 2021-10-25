@@ -1,0 +1,270 @@
+.body {
+  font-family: "Raleway", sans-serif;
+  background:white;
+}
+
+  .contain {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  .contain .header {
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+ padding-left:20px;
+
+}
+
+  .contain .header .title {
+      display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:20px;
+}
+  .contain .header .input-group {
+      display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right:20px;
+  width: 20%;
+  border-radius: 45%;
+  transition: all 0.1s ease-in-out;
+}
+.contain .header .title h3 {
+  color: black;
+  margin-left: 0;
+  font-weight: 400;
+  font-size: 34px;
+}
+.contain .header .title .badge {
+  text-align: center;
+
+  padding: 10px;
+  outline: none;
+  transform: scale(1.1);
+  line-height: 0.5;
+  color: white;
+  border-radius: 50%;
+  background: linear-gradient(130deg, #6978ff 0%, #1b2fe0 100%);
+}
+.Notification{
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+ .badge {
+  text-align: center;
+
+  padding: 5px;
+  outline: none;
+  transform: scale(1.1);
+  line-height: 0.5;
+  color: white;
+  border-radius: 50%;
+  background: linear-gradient(130deg, #6978ff 0%, #FF0000 100%);
+}
+.contain .header .add {
+
+
+  border-radius: 50%;
+  transition: 0.5s;
+  background: linear-gradient(130deg, #6978ff 0%, #1b2fe0 100%);
+}
+.contain .header .add:hover {
+  box-shadow: light blue;
+}
+.contain .header .add a {
+  text-decoration: none;
+}
+.contain .header .add a svg {
+  fill: white;
+}
+.contain .mail-area {
+  display: flex;
+  width:100%;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+
+}
+.contain .mail-area .mail {
+  display: flex;
+  align-items: center;
+ /* justify-content: center; */
+  width: 100%;
+  height: 100px;
+  padding: 10px 0px 10px 10px;
+
+
+
+  transition: 0.5s;
+}
+.contain .mail-area .mail .profile {
+  width: 50px;
+  height: 50px;
+  background: grey;
+  border-radius: 50%;
+  margin-top: -20px;
+
+
+}
+.fa-user {
+background: #grey;
+padding:15px;
+color: white;
+
+}
+.contain .mail-area .mail .content {
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  width: 100%;
+
+
+}
+.contain .mail-area   hr {
+
+   width: 100%;
+  border-bottom: 1px solid grey;
+
+}
+.contain .mail-area .mail .content h4 {
+
+  color: Grey;
+  font-size: 12px;
+  font-weight: 600;
+}
+.contain .mail-area .mail .content h5 {
+
+  color: Grey;
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn-success.hide{
+   display: none;
+
+}
+.despatched{
+  position: absolute;
+  padding-left:25px;
+  padding-bottom:5px;
+  -ms-transform: rotate(10deg); /* IE 9 */
+transform: rotate(8deg);
+
+}
+.despatched.hide{
+   display: none;
+
+}
+.contain .mail-area .mail .content p {
+  position: absolute;
+  right: 15px;
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
+}
+.contain .mail-area .mail .content h6 {
+  position: absolute;
+  right: 20px;
+  padding-top: 30px;
+  color:grey;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.contain .mail-area .mail:hover {
+  background-color: #E5E4E2;
+}
+
+@media (max-width: 600px) {
+  .mail {
+    margin: auto;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+    width: 100% !important;
+    text-align: left;
+  }
+  .mail .profile {
+  display: none;
+  }
+}
+.alert{
+background: #4bb5435e;
+padding: 20px 40px;
+min-width: 420px;
+position: absolute;
+right: 0;
+top: 30px;
+border-radius: 4px;
+border-left: 8px solid #4BB543;
+overflow: hidden;
+opacity: 0;
+pointer-events: none;
+}
+.alert.showAlert{
+opacity: 1;
+pointer-events: auto;
+}
+.alert.show{
+animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+0%{
+  transform: translateX(100%);
+}
+40%{
+  transform: translateX(-10%);
+}
+80%{
+  transform: translateX(0%);
+}
+100%{
+  transform: translateX(-10px);
+}
+}
+.alert.hide{
+display: none;
+}
+
+.alert .fa-check-circle{
+position: absolute;
+left: 20px;
+top: 50%;
+transform: translateY(-50%);
+color: #4BB543;
+font-size: 30px;
+}
+.alert .msg{
+padding: 0 20px;
+font-size: 18px;
+color: #4BB543;
+}
+.alert .close-btn{
+position: absolute;
+right: 0px;
+top: 50%;
+transform: translateY(-50%);
+background: #4bb5435e;
+padding: 20px 18px;
+cursor: pointer;
+}
+.alert .close-btn:hover{
+background: #4bb5435e;;
+
+}
+
+.alert .close-btn .fas{
+color: #4BB543;
+font-size: 22px;
+line-height: 40px;
+}

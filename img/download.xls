@@ -1,0 +1,23 @@
+<h3 style="align-items:center;">Inward letter report</h3>
+              <pre>FROM:01/05/2021</pre>
+              <pre>TO:31/05/2021</pre>
+   <table border="1" align-items="center" style="width:50%;">
+                    <tr>
+                         <th>Date</th>
+                         <th>From</th>
+                         <th>DocumentNo</th>
+       <th>Subject</th>
+       <th>Category</th>
+       <th>Notes</th>
+                    </tr>
+  
+    <tralign-items="center" >
+                         <td>2021-05-08</td>
+                         <td>sairam trust</td>
+                         <td>7899090</td>
+       <td>for the purposr of exam schedule</td>
+       <td>Scholarship</td>
+       <td><p>vaishsua</p>
+</td>
+                    </tr>
+   </table>

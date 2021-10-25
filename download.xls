@@ -1,0 +1,33 @@
+<h3 style="align-items:center;">Inward letter report</h3>
+              <pre>FROM:01/06/2021</pre>
+              <pre>TO:30/06/2021</pre>
+   <table border="1" align-items="center" style="width:50%;">
+                    <tr>
+                         <th>Date</th>
+                         <th>From</th>
+                         <th>DocumentNo</th>
+       <th>Subject</th>
+       <th>Category</th>
+       <th>Notes</th>
+                    </tr>
+  
+    <tralign-items="center" >
+                         <td>2021-06-26</td>
+                         <td>AICTE</td>
+                         <td>678</td>
+       <td>project expo</td>
+       <td>Circular</td>
+       <td><p>note</p>
+</td>
+                    </tr>
+   
+    <tralign-items="center" >
+                         <td>2021-06-01</td>
+                         <td>anna university</td>
+                         <td>7271</td>
+       <td>Exam schedule</td>
+       <td>Circular</td>
+       <td><p>note</p>
+</td>
+                    </tr>
+   </table>
